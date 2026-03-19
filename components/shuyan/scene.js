@@ -42,7 +42,7 @@ export default function Scene({ level }) {
       <div
         style={{
           position: "absolute",
-          bottom: "10vh",
+          bottom: "7vh",
           right: "6vw",
           display: "flex",
           gap: "3vw",

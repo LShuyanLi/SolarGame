@@ -31,7 +31,7 @@ export default function Battery({ chargePercent = 0 }) {
             <Image
                 src={getBatteryImage(clampedCharge)}
                 alt={`Battery ${clampedCharge}%`}
-                width={80}
+                width={100}
                 height={110}
                 style={{ objectFit: "contain" }}
             />

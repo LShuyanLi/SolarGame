@@ -1,23 +1,15 @@
 "use client";
 
-export default function SolarPanel({ level, filledCount }) {
-  const words = ["sun", "solar", "energy", "renewable"];
-
-  let wordIndex = level;
-  if (wordIndex > 3) {
-    wordIndex = 3;
-  }
-
-  const currentWord = words[wordIndex];
-  const letters = currentWord.split("");
+export default function SolarPanel({ targetWord, filledCount }) {
+  const letters = targetWord.toUpperCase().split("");
 
   return (
     <div
       style={{
         position: "absolute",
-        left: "5vw",
+        left: "3.5vw",
         bottom: "18vh",
-        zIndex: 10,
+        zIndex: 8,
       }}
     >
       <div
@@ -30,28 +22,33 @@ export default function SolarPanel({ level, filledCount }) {
       >
         {letters.map((letter, index) => {
           let boxText = "";
+          let boxBg = "rgba(255,255,255,0.75)";
+          let textColor = "#1f1f1f";
 
           if (index === 0) {
             boxText = letter;
+            boxBg = "#ffe600";
           } else if (index < filledCount) {
             boxText = letter;
+            boxBg = "#ffe600";
           }
 
           return (
             <div
               key={index}
               style={{
-                width: "2rem",
-                height: "2rem",
-                border: "0.2rem solid #ffea00ff",
-                borderRadius: "0.2rem",
+                width: "2.4rem",
+                height: "2.4rem",
+                border: "0.18rem solid #ffe600",
+                borderRadius: "0.4rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 fontSize: "1.5rem",
-                fontWeight: "700",
-                color: "white",
-                backgroundColor: "rgba(255,255,255,0.12)",
+                fontWeight: "800",
+                color: textColor,
+                backgroundColor: boxBg,
+                boxShadow: "0 0 6px rgba(0,0,0,0.2)",
               }}
             >
               {boxText}

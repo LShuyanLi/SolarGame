@@ -3,9 +3,9 @@
 export default function ClueText({ level }) {
   const clues = [
     "A bright star in the sky that gives us light and heat.",
-    "Energy that comes from the sun and can be used as power.",
+    "Related to energy that comes from the sun.",
     "The power that makes things work, like light, heat, or movement.",
-    "Energy that comes from natural sources and will not run out.",
+    "Energy from natural sources that will not run out.",
   ];
 
   let clueIndex = level;
@@ -18,10 +18,10 @@ export default function ClueText({ level }) {
       style={{
         width: "100%",
         position: "absolute",
-        top: "4vh",
+        top: "12vh",
         left: "50%",
         transform: "translateX(-50%)",
-        zIndex: 10,
+        zIndex: 20,
         textAlign: "center",
       }}
     >
